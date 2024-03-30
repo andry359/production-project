@@ -4,9 +4,10 @@ import { Routes, Route } from "react-router";
 import { Link } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "./providers/ThemeProvider";
-import { AboutPage } from "pages/AboutPage";
+import { AboutPage } from "pages/AboutPage"
 import { MainPage } from "pages/MainPage";
-import { AppRouter } from "./providers/router";
+import { AppRouter } from "app/providers/router";
+import { Navbar } from "widgets/Navbar";
 
 const App = () => {
 
@@ -14,10 +15,9 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <button onClick={toggleTheme}>TOGGLE THEME</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О нас</Link>
+            <Navbar />
             <AppRouter />
+            <button onClick={toggleTheme}>TOGGLE THEME</button>
         </div>
     );
 };
