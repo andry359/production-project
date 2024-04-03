@@ -9,4 +9,4 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
         mainFiles: ['index'],
         alias: {},
     };
-};
+}
