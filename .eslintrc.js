@@ -2,6 +2,8 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
+        'jest/globals': true,
     },
     extends: [
         'plugin:react/recommended',
@@ -29,6 +31,7 @@ module.exports = {
     plugins: [
         'react',
         'i18next',
+        'jest',
     ],
     rules: {
         quotes: [2, 'single', { avoidEscape: true }],
