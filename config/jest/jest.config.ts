@@ -1,4 +1,4 @@
-import path from "path";
+import path from 'path';
 
 export default {
     clearMocks: true,
@@ -19,12 +19,12 @@ export default {
     ],
     rootDir: '../../',
     testMatch: [
-      '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
+        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
-      '\\.s?css$': 'identity-obj-proxy',
-      '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

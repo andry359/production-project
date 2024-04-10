@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Button } from 'shared/ui/Button/Button';
 
 const MainPage = () => {
     // внутри хука useTranslation('about') передаем название чанки с переводом той страницы,

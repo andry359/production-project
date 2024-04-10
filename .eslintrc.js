@@ -5,11 +5,7 @@ module.exports = {
         jest: true,
         'jest/globals': true,
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-        'plugin:i18next/recommended',
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     overrides: [
         {
@@ -63,8 +59,11 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true, 
-            ignoreAttribute: ['data-testid'] }],
-        'max-length': ['error', { ignoreComments: true, code: 100}]
+            ignoreAttribute: ['data-testid', 'to'] }],
+        'max-len': [
+            'error', 
+            { ignoreComments: true, code: 100,  ignorePattern: '^import .*' }
+        ]
     },
     globals: {
         __IS_DEV__: true,

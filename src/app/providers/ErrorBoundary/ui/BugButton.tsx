@@ -9,11 +9,11 @@ export const BugButton = () => {
     const onThrow = () => setError(true);
 
     useEffect(() => {
-        if(error) {
+        if (error) {
             throw new Error();
-        };
+        }
     }, [error]);
-    
+
     return (
         <Button
             onClick={onThrow}
