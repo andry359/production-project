@@ -63,7 +63,9 @@ module.exports = {
         'max-len': [
             'error', 
             { ignoreComments: true, code: 100,  ignorePattern: '^import .*' }
-        ]
+        ],
+        "no-param-reassign": [2, { "props": false }],
+        "i18next/no-literal-string": 'off'
     },
     globals: {
         __IS_DEV__: true,
