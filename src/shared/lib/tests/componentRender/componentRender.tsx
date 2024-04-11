@@ -12,7 +12,7 @@ export function componentRender(component: ReactNode, options: ComponentRenderOp
     const {
         route = '/',
     } = options;
-    
+
     render(
         <MemoryRouter initialEntries={[route]}>
             <I18nextProvider i18n={i18nForTests}>
