@@ -16,12 +16,10 @@
     --sidebar-width-collapsed: 80px;
 
     // Цвета
-    --primary-color: #041c65;
+    --primary-color: #0051ff;
+    --bg-color: #e8e8ea;
+    --overlay-color: rgba(0 0 0 / 75%);
 
-    // &.app.light {
-    //     --primary-color: #041c65;
-    // }
-    // &.app.dark {
-    //     --primary-color: #049604;
-    // }
+    // z-Индексы
+    --modal-z-index: 10;
 }

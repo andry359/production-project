@@ -28,6 +28,7 @@ module.exports = {
         'react',
         'i18next',
         'jest',
+        'react-hooks',
     ],
     rules: {
         quotes: [2, 'single', { avoidEscape: true }],
@@ -62,17 +63,21 @@ module.exports = {
             ignoreAttribute: ['data-testid', 'to'] }],
         'max-len': [
             'error', 
-            { ignoreComments: true, code: 100,  ignorePattern: '^import .*' }
+            { ignoreComments: true, code: 390,  ignorePattern: '^import .*' }
         ],
         "no-param-reassign": [2, { "props": false }],
-        "i18next/no-literal-string": 'off'
+        "i18next/no-literal-string": 'off',
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "jsx-a11y/click-events-have-key-events": 'off',
+        "jsx-a11y/no-static-element-interactions": 'off',
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx'],
+            files: ['**/src/**/*.{test,stories}.{ts,tsx'],
             rules: {
                 'i18next/no-literal-string': 'off',
             },
