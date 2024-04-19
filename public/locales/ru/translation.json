@@ -1,5 +1,16 @@
 {
   "": "",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
+    " Neque qui vero laboriosam placeat, ab tempore maxime nulla repellendus? Ad quos odit distinctio quis eligendi": {
+      " Exercitationem minus reprehenderit recusandae voluptatum iste! Similique vero sit, unde id veniam ipsam ipsum alias sequi modi nobis": {
+        " Maxime, nam deserunt": {
+          " Reiciendis minus perspiciatis dolorem aliquid": {
+            "": ""
+          }
+        }
+      }
+    }
+  },
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "",
@@ -17,5 +28,7 @@
   "Сгенерировать ошибку": "Сгенерировать ошибку",
   "Сокращенный язык": "Рус",
   "Страница не найдена": "Страница не найдена",
-  "Язык": "Русский"
+  "Язык": "Русский",
+  "инкремент": "инкремент",
+  "декремент": "декремент"
 }

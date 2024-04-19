@@ -26,6 +26,9 @@ export default {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
+    globals: {
+        __IS_DEV__: true,
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -62,9 +65,6 @@ export default {
     // globalSetup: undefined,
 
     // globalTeardown: undefined,
-
-    // A set of global variables that need to be available in all test environments
-    // globals: {},
 
     // maxWorkers: "50%",
 
