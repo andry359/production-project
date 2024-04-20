@@ -72,6 +72,7 @@ module.exports = {
         "jsx-a11y/click-events-have-key-events": 'off',
         "jsx-a11y/no-static-element-interactions": 'off',
         "no-param-reassign": 'off',
+        "react/prop-types": 0,
     },
     globals: {
         __IS_DEV__: true,
