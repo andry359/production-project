@@ -1,7 +1,5 @@
-import { Counter } from 'entities/Counter';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
 
 const MainPage = () => {
     // внутри хука useTranslation('about') передаем название чанки с переводом той страницы,
@@ -19,11 +17,6 @@ const MainPage = () => {
     return (
         <div>
             {t('Главная страница')}
-            <Input
-                value={value}
-                onChange={onChange}
-                placeholder="Введите текст"
-            />
         </div>
     );
 };
