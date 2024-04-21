@@ -19,6 +19,9 @@
     --primary-color: #0051ff;
     --bg-color: #e8e8ea;
     --overlay-color: rgba(0 0 0 / 75%);
+    /* stylelint-disable-next-line color-hex-length */
+    --red-light: #ff0000;
+    --red-dark: #be0707;
 
     // z-Индексы
     --modal-z-index: 10;
