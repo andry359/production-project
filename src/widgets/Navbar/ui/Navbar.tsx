@@ -4,9 +4,9 @@ import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
-import cls from './Navbar.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
@@ -33,7 +33,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         dispath(userActions.logout());
     }, [dispath]);
 
-    if(authData) {
+    if (authData) {
         return (
             <div className={classNames(cls.Navbar, {}, [className])}>
                 <Button

@@ -3,12 +3,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import cls from './LoginForm.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import cls from './LoginForm.module.scss';
 import { loginActions } from '../../model/slice/loginSlice';
 import { getLoginState } from '../../model/selectors/getLoginState';
 import { loginBuUsername } from '../../model/services/loginByUsername/loginByUsername';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
 
 interface LoginFormProps {
     className?: string;
@@ -18,7 +18,9 @@ export const LoginForm: FC<LoginFormProps> = React.memo(({ className }) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
-    const { username, password, isLoading, error } = useSelector(getLoginState);
+    const {
+        username, password, isLoading, error,
+    } = useSelector(getLoginState);
 
     const onChangeUsername = useCallback((value: string) => {
         dispatch(loginActions.setUsername(value));
@@ -29,13 +31,13 @@ export const LoginForm: FC<LoginFormProps> = React.memo(({ className }) => {
     }, [dispatch]);
 
     const onLoginClick = useCallback(() => {
-        dispatch(loginBuUsername({ username, password }))
+        dispatch(loginBuUsername({ username, password }));
     }, [dispatch, username, password]);
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
-            <Text title={t('Авторизация')}/>
-            {error && <Text theme={TextTheme.ERROR} text={error}/>}
+            <Text title={t('Авторизация')} />
+            {error && <Text theme={TextTheme.ERROR} text={t('Неверный логин или пароль!')} />}
             <Input
                 type="text"
                 className={cls.input}
